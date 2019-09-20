@@ -1,0 +1,78 @@
+general:
+  label: 基础设置
+  items:
+    themeStyle:
+      name: themeStyle
+      label: 主题样式
+      type: select
+      default: light
+      options:
+        - value: light
+          label: light
+        - value: dark
+          label: dark
+    title_primary:
+      name: title_primary
+      label: 主标题
+      type: text
+      placeholder: '会覆盖博客默认标题，可不填写'
+    title_secondary:
+      name: title_secondary
+      label: 副标题
+      type: text
+    showPageCount:
+      name: showPageCount
+      label: 分页显示数码
+      type: radio
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    showCategories:
+      name: showCategories
+      label: 是否在文章内显示分类
+      type: radio
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    showTags:
+      name: showTags
+      label: 是否在文章内显示标签
+      type: radio
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+social:
+  label: 社交资料
+  items:
+    twitter:
+      name: twitter
+      label: Twitter
+      type: text
+      placeholder: '只需填入 Twitter 用户名即可'
+    weibo:
+      name: weibo
+      label: 微博
+      type: text
+      placeholder: '只需填入微博 Id 即可'
+    instagram:
+      name: instagram
+      label: Instagram
+      type: text
+      placeholder: '只需填入 Instagram 用户名即可'
+    github:
+      name: github
+      label: Github
+      type: text
+      placeholder: '只需填入 Github 用户名即可'
