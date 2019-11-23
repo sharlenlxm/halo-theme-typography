@@ -38,5 +38,29 @@
                 </div>
             </#list>
         </div>
+        <div class="pagination no-margin-bottom"><p class="clearfix"></p>
+            <#if settings.showPageCount!true>
+                <p> 第 ${posts.number+1} 頁 / 共 ${posts.getTotalPages()} 頁 &nbsp;</p>
+            </#if>
+            <p>
+                <#if posts.hasPrevious()>
+                    <span class="pre pagbuttons">
+                        <i class="fa fa-angle-double-left"></i>&nbsp;
+                        <#if posts.number == 1>
+                            <a role="navigation" href="${context!}/">上一頁</a>
+                        <#else>
+                            <a role="navigation" href="${context!}/page/${posts.number}/">上一頁</a>
+                        </#if>
+                    </span>
+                    <span>&nbsp;</span>
+                </#if>
+                <#if posts.hasNext()>
+                    <span class="next pagbuttons">
+                        <a role="navigation" href="${context!}/page/${posts.number+2}/">下一頁</a>&nbsp;
+                        <i class="fa fa-angle-double-right"></i>
+                    </span>
+                </#if>
+            </p>
+        </div>
     </div>
 </@layout>
